@@ -214,7 +214,7 @@ export function ContactForm() {
             name="message"
             value={formData.message}
             onChange={handleChange}
-            placeholder="Напишите ваше сообщение..."
+            placeholder="Ваши вопросы, предложения или комментарии по проекту..."
             className={cn("min-h-[120px]", errors.message && "border-red-500 focus-visible:ring-red-500")}
             aria-invalid={!!errors.message}
             aria-describedby={errors.message ? "message-error" : undefined}

@@ -1,5 +1,5 @@
 import { StarField } from "@/components/StarField"
-import { ChevronDown, Linkedin, Users, LineChart, Clock, Lightbulb, BotIcon as Robot } from "lucide-react"
+import { ChevronDown, Linkedin, LayoutDashboard, Layers, Pencil, Eye, BotIcon as Robot } from "lucide-react"
 import { ContactForm } from "@/components/ContactForm"
 import { ChatbotModal } from "@/components/ChatbotModal"
 import { useState, useEffect, useRef } from "react"
@@ -241,13 +241,13 @@ export default function Index() {
               }}
             >
               <h1 className="text-4xl font-bold text-white md:text-6xl font-heading">
-                Nebula Ventures{" "}
-                <span role="img" aria-label="rocket">
-                  🚀
+                UX / UI Проектирование{" "}
+                <span role="img" aria-label="design">
+                  🎨
                 </span>
               </h1>
               <p className="mt-4 text-lg text-gray-300 md:text-xl px-4 max-w-xs mx-auto md:max-w-none">
-                Экспертиза в области ИИ и технологий
+                Разработка схем и интерфейсов веб-приложений
               </p>
               <Button
                 onClick={scrollToAbout}
@@ -295,19 +295,20 @@ export default function Index() {
                 />
               </div>
               <div className="space-y-4 text-center md:text-left px-4 md:px-0">
-                <h2 className="text-3xl font-bold font-heading">О нас</h2>
+                <h2 className="text-3xl font-bold font-heading">О проекте</h2>
                 <div className="space-y-4 max-w-2xl">
                   <p className="text-gray-300">
-                    Мы помогаем компаниям использовать передовые технологии, чтобы радовать клиентов
-                    и оптимизировать бизнес-процессы.
+                    Данный сайт создан в рамках учебного задания по дисциплине «Проектирование интерфейсов
+                    веб-приложений». Цель — изучить подходы к разработке схем и прототипов пользовательских
+                    интерфейсов.
                   </p>
                   <p className="text-gray-300">
-                    Стратегическое планирование, техническое лидерство или практическая поддержка разработки —
-                    мы поможем создать правильные решения для вашего бизнеса.
+                    Проект охватывает полный цикл UX-проектирования: от анализа требований и создания
+                    пользовательских сценариев до построения wireframe-макетов и интерактивных прототипов.
                   </p>
                   <p className="text-gray-300">
-                    Наша команда имеет более 10 лет опыта создания сложных технических продуктов
-                    для стартапов и крупных компаний. Свяжитесь с нами или попробуйте ИИ-ассистента.
+                    Используемые методы: структурирование информационной архитектуры, создание схем навигации,
+                    прототипирование ключевых экранов и тестирование юзабилити.
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 pt-4 justify-center md:justify-start">
@@ -346,7 +347,7 @@ export default function Index() {
               isServicesTitleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
             )}
           >
-            Услуги
+            Этапы проектирования
           </h2>
           <div
             ref={servicesContentRef}
@@ -356,46 +357,51 @@ export default function Index() {
             )}
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Fractional CPO */}
+              {/* Анализ требований */}
               <div className="bg-gray-800 rounded-lg p-6 transition-all duration-300 hover:bg-gray-700">
                 <div className="flex items-center mb-4">
-                  <Users className="h-7 w-7 text-white mr-4" aria-hidden="true" />
-                  <h3 className="text-xl font-semibold font-heading">CPO / CTO на аутсорсе</h3>
+                  <LayoutDashboard className="h-7 w-7 text-white mr-4" aria-hidden="true" />
+                  <h3 className="text-xl font-semibold font-heading">Анализ требований</h3>
                 </div>
                 <p className="text-gray-300">
-                  Продуктовое лидерство, выстраивание процессов, развитие команды, технологическая стратегия.
+                  Сбор и структурирование требований к системе, определение целевой аудитории
+                  и пользовательских сценариев (Use Cases).
                 </p>
               </div>
 
-              {/* Product Consulting */}
+              {/* Информационная архитектура */}
               <div className="bg-gray-800 rounded-lg p-6 transition-all duration-300 hover:bg-gray-700">
                 <div className="flex items-center mb-4">
-                  <LineChart className="h-7 w-7 text-white mr-4" aria-hidden="true" />
-                  <h3 className="text-xl font-semibold font-heading">Продуктовый консалтинг</h3>
+                  <Layers className="h-7 w-7 text-white mr-4" aria-hidden="true" />
+                  <h3 className="text-xl font-semibold font-heading">Информационная архитектура</h3>
                 </div>
                 <p className="text-gray-300">
-                  Разработка роадмапа, поиск и валидация product-market fit, оценка кандидатов.
+                  Построение структуры приложения: карта сайта, навигационные схемы,
+                  иерархия контента и группировка функций.
                 </p>
               </div>
 
-              {/* Interim Leadership */}
+              {/* Wireframe-прототипирование */}
               <div className="bg-gray-800 rounded-lg p-6 transition-all duration-300 hover:bg-gray-700">
                 <div className="flex items-center mb-4">
-                  <Clock className="h-7 w-7 text-white mr-4" aria-hidden="true" />
-                  <h3 className="text-xl font-semibold font-heading">Временное руководство</h3>
-                </div>
-                <p className="text-gray-300">Временный CPO или VP of Product для компаний в период трансформации.</p>
-              </div>
-
-              {/* Workshops & Advisory */}
-              <div className="bg-gray-800 rounded-lg p-6 transition-all duration-300 hover:bg-gray-700">
-                <div className="flex items-center mb-4">
-                  <Lightbulb className="h-7 w-7 text-white mr-4" aria-hidden="true" />
-                  <h3 className="text-xl font-semibold font-heading">Разработка продуктов</h3>
+                  <Pencil className="h-7 w-7 text-white mr-4" aria-hidden="true" />
+                  <h3 className="text-xl font-semibold font-heading">Wireframe-прототипирование</h3>
                 </div>
                 <p className="text-gray-300">
-                  Быстрое прототипирование и запуск внутренних и внешних приложений и сайтов
-                  с использованием современных инструментов.
+                  Разработка низко- и среднеуровневых схем экранов: расположение элементов,
+                  блочная структура, интерактивные переходы.
+                </p>
+              </div>
+
+              {/* Юзабилити-тестирование */}
+              <div className="bg-gray-800 rounded-lg p-6 transition-all duration-300 hover:bg-gray-700">
+                <div className="flex items-center mb-4">
+                  <Eye className="h-7 w-7 text-white mr-4" aria-hidden="true" />
+                  <h3 className="text-xl font-semibold font-heading">Юзабилити-тестирование</h3>
+                </div>
+                <p className="text-gray-300">
+                  Оценка удобства интерфейса по принципам Nielsen, выявление проблем
+                  и итеративное улучшение прототипов.
                 </p>
               </div>
             </div>
@@ -412,7 +418,7 @@ export default function Index() {
               isHeadingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
             )}
           >
-            Давайте создавать
+            Обратная связь
           </h2>
           <ContactForm />
         </div>
